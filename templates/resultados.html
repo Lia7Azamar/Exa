@@ -4,18 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 {
+            color: #5a67d8;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        li {
+            background-color: #e2e8f0;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #4a5568;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #5a67d8;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+        a:hover {
+            background-color: #4c51bf;
+        }
+        p {
+            color: #e53e3e;
+        }
+    </style>
 </head>
 <body>
-    <h1>Resultados de la Búsqueda</h1>
-    {% if resultado %}
-        <ul>
-            {% for paso in resultado %}
-                <li>{{ paso }}</li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No se encontró solución.</p>
-    {% endif %}
-    <a href="/">Volver a intentar</a>
+    <div class="container">
+        <h1>Resultados de la Búsqueda</h1>
+        {% if resultado %}
+            <ul>
+                {% for paso in resultado %}
+                    <li>{{ paso }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No se encontró solución.</p>
+        {% endif %}
+        <a href="/">Volver a intentar</a>
+    </div>
 </body>
 </html>
