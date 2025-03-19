@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos de Búsqueda</title>
+</head>
+<body>
+    <h1>Selecciona el Método de Búsqueda</h1>
+    <form action="/resultados" method="POST">
+        <label for="metodo">Método de Búsqueda:</label>
+        <select id="metodo" name="metodo">
+            <option value="1">BFS Amplitud</option>
+            <option value="2">DFS Profundidad</option>
+            <option value="3">BFS Recursivo</option>
+        </select>
+        <br><br>
+        <label for="estado_inicial">Estado Inicial:</label>
+        <input type="text" id="estado_inicial" name="estado_inicial" placeholder="Ingresa los números separados por espacio" required>
+        <br><br>
+        <label for="solucion">Solución:</label>
+        <input type="text" id="solucion" name="solucion" placeholder="Ingresa los números separados por espacio" required>
+        <br><br>
+        <button type="submit">Ejecutar</button>
+    </form>
+</body>
+</html>

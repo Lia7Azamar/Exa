@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+</head>
+<body>
+    <h1>Resultados de la Búsqueda</h1>
+    {% if resultado %}
+        <ul>
+            {% for paso in resultado %}
+                <li>{{ paso }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontró solución.</p>
+    {% endif %}
+    <a href="/">Volver a intentar</a>
+</body>
+</html>
